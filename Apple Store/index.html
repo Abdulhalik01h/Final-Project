@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Apple Hub | Authorized Premium Reseller</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <i class="fab fa-apple"></i> Apex<span>Hub</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Store</a></li>
+            <li><a href="#specs">Tech Specs</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+        <div class="nav-icons">
+            <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+            <a href="#order" class="icon-btn cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge">0</span>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <span class="hero-tag">New Release</span>
+            <h1>iPhone 17 Pro Max</h1>
+            <p>Titanium. So strong. So light. So Pro.</p>
+            <div class="cta-group">
+                <a href="#products" class="btn primary">Buy Now</a>
+                <a href="#specs" class="btn text-link">Learn more <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="section">
+        <div class="section-header reveal">
+            <h2>The Latest Collection.</h2>
+            <p>Upgrade to the world's most powerful personal devices.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="card reveal">
+                <span class="badge new">New</span>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500" alt="iPhone 15 Pro">
+                </div>
+                <div class="card-body">
+                    <h3>iPhone 15 Pro</h3>
+                    <div class="color-options">
+                        <span class="dot titanium-nat"></span>
+                        <span class="dot titanium-blue"></span>
+                        <span class="dot titanium-black"></span>
+                    </div>
+                    <div class="price-info">
+                        <span class="price">RS.209,499</span>
+                        <span class="monthly">or Rs.20,000/mo</span>
+                    </div>
+                    <button class="btn-buy" onclick="selectModel('iPhone 15 Pro', 209,499)">Select</button>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=500" alt="iPhone 14">
+                </div>
+                <div class="card-body">
+                    <h3>iPhone 14</h3>
+                    <div class="color-options">
+                        <span class="dot yellow"></span>
+                        <span class="dot purple"></span>
+                        <span class="dot mid-black"></span>
+                    </div>
+                    <div class="price-info">
+                        <span class="price">RS.125,000</span>
+                        <span class="monthly">or RS.14,500/mo</span>
+                    </div>
+                    <button class="btn-buy" onclick="selectModel('iPhone 14', 799)">Select</button>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1603891128711-11b4b03bb138?w=500" alt="iPhone 12">
+                </div>
+                <div class="card-body">
+                    <h3>iPhone 12</h3>
+                    <div class="color-options">
+                        <span class="dot purple"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="price-info">
+                        <span class="price">RS.70,000</span>
+                        <span class="monthly">Great Value</span>
+                    </div>
+                    <button class="btn-buy" onclick="selectModel('iPhone 12', 599)">Select</button>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500" alt="iPhone SE">
+                </div>
+                <div class="card-body">
+                    <h3>iPhone SE</h3>
+                    <div class="color-options">
+                        <span class="dot red"></span>
+                        <span class="dot mid-black"></span>
+                        <span class="dot white"></span>
+                    </div>
+                    <div class="price-info">
+                        <span class="price">RS.45,000</span>
+                        <span class="monthly">Entry Level</span>
+                    </div>
+                    <button class="btn-buy" onclick="selectModel('iPhone SE', 429)">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="section bg-light">
+        <div class="section-header reveal">
+            <h2>Tech Specs</h2>
+            <p>See what's under the hood.</p>
+        </div>
+        
+        <div class="tabs-container reveal">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab('display')">Display</button>
+                <button class="tab-btn" onclick="openTab('camera')">Camera</button>
+                <button class="tab-btn" onclick="openTab('chip')">Chip</button>
+            </div>
+            
+            <div class="tab-content" id="display">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Super Retina XDR</h4>
+                        <p>OLED display with ProMotion technology.</p>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-expand"></i>
+                        <h4>6.7" or 6.1"</h4>
+                        <p>Two sizes for every pro.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content hidden" id="camera">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <i class="fas fa-camera"></i>
+                        <h4>48MP Main</h4>
+                        <p>Capture super-high-resolution photos.</p>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-video"></i>
+                        <h4>ProRes Video</h4>
+                        <p>Record cinematic 4K videos at 60 fps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="chip">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <i class="fas fa-microchip"></i>
+                        <h4>A17 Pro</h4>
+                        <p>The biggest redesign in the history of GPUs.</p>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-gamepad"></i>
+                        <h4>Ray Tracing</h4>
+                        <p>Hardware-accelerated for next-level gaming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="section">
+        <div class="checkout-layout reveal">
+            <div class="checkout-form">
+                <h2>Customer Order Information</h2>
+                <br>
+                <form id="orderForm">
+                    <h3>Email</h3>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <h3>Shipping Address</h3>
+                    <div class="form-row">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="Postal Code" required>
+                    </div>
+
+                    <button type="submit" class="btn primary full-width">Complete Order</button>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h3>Your Bag</h3>
+                <div id="empty-cart-msg">Your bag is empty.</div>
+                
+                <div id="cart-item" class="hidden">
+                    <div class="summary-row">
+                        <span id="summary-model">iPhone 15 Pro</span>
+                        <span id="summary-price">$999.00</span>
+                    </div>
+                    <div class="summary-row text-muted">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <hr>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="summary-total">$999.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Shop and Learn</h4>
+                <ul>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">Watch</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Apple Music</a></li>
+                    <li><a href="#">Apple TV+</a></li>
+                    <li><a href="#">Apple Care+</a></li>
+                    <li><a href="#">iCloud</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="#">Manage Your ID</a></li>
+                    <li><a href="#">Apple Store Account</a></li>
+                    <li><a href="#">iCloud.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h4>Stay Connected</h4>
+                <p>Sign up for the latest news and offers.</p>
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email">
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Apex Apple Hub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
