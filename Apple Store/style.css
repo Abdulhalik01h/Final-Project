@@ -157,7 +157,20 @@ footer { background: #f5f5f7; color: #424245; padding: 60px 5% 20px; font-size: 
 /* --- Mobile --- */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
-    .nav-links { display: none; } /* Add JS hamburger menu logic for real toggle */
+    .nav-links { display: none; }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-blur);
+        backdrop-filter: blur(20px);
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
     .checkout-layout { grid-template-columns: 1fr; }
     .hamburger { display: block; }
 }
